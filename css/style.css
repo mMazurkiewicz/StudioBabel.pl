@@ -173,7 +173,7 @@ h1 {
   background-color: white;
   padding: 7% 10% 10% 10%;
   opacity: 1;
-  overflow-y: auto;
+  overflow: auto;
   color: black;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
