@@ -128,7 +128,6 @@ $(document).ready(function(e) {
 
   // MOBILE SWIPE
   var x, y, lastX, lastY = 0;
-  var isSwiping = false;
 
   // get coordinates from touch start position
   $sliderElements.on('touchstart', function(e) {
@@ -145,9 +144,11 @@ $(document).ready(function(e) {
   // swipe function
   function swipe(x, y, lastX, lastY) {
     if (y - lastY < 40 && y - lastY > -40) { //prevent from vertical swipe
-      if (x - lastX < 0) { //check for left or right swipe
+
+      //check for prev or next swipe
+      if (x - lastX < -40) { //check for prev or next swipe
         prevSlide();
-      } else {
+      } else if (x - lastX > 40) {
         nextSlide();
       }
     }
