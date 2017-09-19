@@ -141,7 +141,7 @@ $(document).ready(function(e) {
     swipe(x, y, lastX, lastY);
   })
 
-  // swipe function
+  // swipe function declaration
   function swipe(x, y, lastX, lastY) {
     if (y - lastY < 40 && y - lastY > -40) { //prevent from vertical swipe
 
@@ -154,4 +154,5 @@ $(document).ready(function(e) {
     }
   }
 
+// END OF DOCUMENT READY
 })
