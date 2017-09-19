@@ -78,7 +78,7 @@ $(document).ready(function(e) {
   // set slider width
   $slider.css({'width': sliderWidth});
 
-  // change variables values to prevent correct slideshow in case of resizeing web browser window
+  // look for browser window size and change slider and slides width in case of mobile rotating/browser resize
   $(window).resize(function(e) {
     elementWidth = e.currentTarget.innerWidth;
     sliderWidth = elementWidth * $sliderElements.length;
@@ -89,6 +89,7 @@ $(document).ready(function(e) {
     });
   })
 
+  // Next slide animation
   function nextSlide() {
     if (index >= $sliderElements.length - 1) return;
     currentPosition += elementWidth;
@@ -97,6 +98,7 @@ $(document).ready(function(e) {
     }, 'fast')
     index++;
   }
+  // Previous slide animation
   function prevSlide() {
     if (index <= 0) return;
     currentPosition -= elementWidth;
