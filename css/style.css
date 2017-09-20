@@ -9,6 +9,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/* Hide scrollbar on whole page */
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* MAIN FLEX CONTAINER*/
 .main-container {
   background-image: url('../images/bg2.JPG');
@@ -173,7 +178,7 @@ h1 {
   background-color: white;
   padding: 7% 10% 10% 10%;
   opacity: 1;
-  overflow: auto;
+  overflow: scroll;
   color: black;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
@@ -224,7 +229,6 @@ h1 {
   background-position: center;
   overflow: hidden;
   z-index: 99;
-  overflow: hidden;
 }
 .slider {
   list-style: none;
