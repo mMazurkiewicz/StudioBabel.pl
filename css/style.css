@@ -72,6 +72,10 @@
 div .float {
   position: fixed;
 }
+div .sticky {
+  position: absolute;
+  z-index: 99;
+}
 .close-button-white {
   z-index: 100;
 }
@@ -166,7 +170,7 @@ h1 {
   width: 100%;
 }
 /* SECTIONS */
-.about-us, .gallery, .offer, .contact {
+.section {
   display: none;
   position: absolute;
   top: 10%;
@@ -177,24 +181,41 @@ h1 {
   text-align: center;
   background-color: white;
   padding: 7% 10% 10% 10%;
-  opacity: 1;
-  overflow: scroll;
+  /*overflow: scroll;*/
   color: black;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-
-/* O NAS */
-.about-us h2 {
+.section h2 {
   margin-bottom: 10%;
   color: rgba(0,0,0,0.87);
+  right: 0;
+  left: 0;
+  background: white;
 }
-.about-us p {
-  font-weight: 200;
+.section p {
   color: rgba(0,0,0,0.54);
   line-height: 30px;
   text-align: justify;
   font-weight: 300;
+  overflow-y: scroll;
+  height: 90%;
+}
+.section a {
+  color: inherit;
+}
+
+/* CONTACT */
+.contact p, .contact h2 {
+  text-align: center;
+  padding-bottom: 20px;
+  height: auto;
+  margin-top: 0;
+}
+span.reverse {
+    color: inherit;
+    unicode-bidi: bidi-override;
+    direction: rtl;
 }
 
 /* GALLERY */
@@ -210,13 +231,14 @@ h1 {
   left: 0;
   bottom: 0;
   opacity: 1;
+  overflow-y: scroll;
 }
 
  .item {
   cursor: pointer;
 }
 
-/* SLIDER */
+/* Gallery lightbox/SLIDER */
 .lightbox {
   display: none;
   position: fixed;
@@ -273,38 +295,6 @@ h1 {
 }
 .prev:hover, .next:hover {
   opacity: 0.7;
-}
-/* OFFER */
-.offer h2 {
-  margin-bottom: 9%;
-  color: rgba(0,0,0,0.87);
-}
-.offer p {
-  font-weight: 200;
-  color: rgba(0,0,0,0.54);
-  line-height: 30px;
-  text-align: justify;
-  font-weight: 300;
-}
-
-/* CONTACT */
-.contact h2 {
-  margin: 40px;
-  color: rgba(0,0,0,0.87);
-}
-.contact p {
-  font-weight: 300;
-  color: rgba(0,0,0,0.54);
-  line-height: 30px;
-  padding-bottom: 20px;:
-}
-.contact a {
-  color: inherit;
-}
-span.reverse {
-    color: inherit;
-    unicode-bidi: bidi-override;
-    direction: rtl;
 }
 
 /* FLEXBIN */
