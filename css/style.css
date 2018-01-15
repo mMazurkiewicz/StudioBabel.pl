@@ -8,6 +8,9 @@
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
+a {
+  text-decoration: none;
+}
 
 /* Hide scrollbar on whole page */
 ::-webkit-scrollbar {
